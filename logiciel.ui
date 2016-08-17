@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>666</width>
+    <height>481</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>CamControle</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>symbole pacosam.png</normaloff>symbole pacosam.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="3" column="1">
+     <widget class="QComboBox" name="comboBox">
+      <item>
+       <property name="text">
+        <string>Save photo</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Autorisation Web</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Save video</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Impote photo</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="2" column="3" rowspan="2">
+     <widget class="Phonon::VideoPlayer" name="videoPlayer"/>
+    </item>
+    <item row="1" column="3">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QPushButton" name="pushButton_cam1">
+          <property name="text">
+           <string>CAM1</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDial" name="ROT_cam1">
+          <property name="maximum">
+           <number>179</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_7">
+          <property name="text">
+           <string>Moteur 1</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QPushButton" name="pushButton_cam2">
+          <property name="text">
+           <string>CAM2</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDial" name="ROT_cam2">
+          <property name="maximum">
+           <number>179</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>Moteur_2</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item row="3" column="0">
+     <widget class="QProgressBar" name="progressBar">
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0" rowspan="3" colspan="2">
+     <widget class="QGraphicsView" name="graphicsView"/>
+    </item>
+    <item row="0" column="2" rowspan="2">
+     <widget class="QSlider" name="verticalSlider">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="3">
+     <widget class="QPushButton" name="pushButton_start">
+      <property name="text">
+       <string>START</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>666</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFichier">
+    <property name="title">
+     <string>fichier</string>
+    </property>
+    <addaction name="actionOuvrir"/>
+    <addaction name="actionSauvegard"/>
+    <addaction name="actionClose"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionPrecedent"/>
+    <addaction name="actionAvant"/>
+   </widget>
+   <addaction name="menuFichier"/>
+   <addaction name="menuEdit"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionOuvrir">
+   <property name="text">
+    <string>Ouvrir</string>
+   </property>
+  </action>
+  <action name="actionSauvegard">
+   <property name="text">
+    <string>Sauvegard</string>
+   </property>
+  </action>
+  <action name="actionClose">
+   <property name="text">
+    <string>close</string>
+   </property>
+  </action>
+  <action name="actionPrecedent">
+   <property name="text">
+    <string>Precedent</string>
+   </property>
+  </action>
+  <action name="actionAvant">
+   <property name="text">
+    <string>Avant</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Phonon::VideoPlayer</class>
+   <extends>QWidget</extends>
+   <header location="global">phonon/videoplayer.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
