@@ -126,7 +126,7 @@ class Surveillance( QMainWindow,Ui_MainWindow):
             self.Sauvegard(msg)
         elif choix=="close is triggered":
             os.chdir(Actualposition)
-            self.VerfiFilSelect("symbole pacosam.png") 
+            self.VerfiFilSelect("symbole_pacosam.png") 
             QMessageBox.information(self,"Arret du Programme","A Bientot")
             if self.thr:
                 for i in self.thr:
